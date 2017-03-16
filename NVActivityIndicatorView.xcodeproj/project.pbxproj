@@ -56,6 +56,7 @@
 		90A879A71BA55798001C8989 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A879871BA55798001C8989 /* NVActivityIndicatorShape.swift */; };
 		90A879A81BA55798001C8989 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A879881BA55798001C8989 /* NVActivityIndicatorView.swift */; };
 		BD1452341C15810200B952C8 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1452331C15810200B952C8 /* NVActivityIndicatorAnimationBallRotateChase.swift */; };
+		EDF765081E7AFA6500D5D0F0 /* NVActivityIndicatorAnimationBlipMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF765071E7AFA6500D5D0F0 /* NVActivityIndicatorAnimationBlipMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		90A879871BA55798001C8989 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		90A879881BA55798001C8989 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
 		BD1452331C15810200B952C8 /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
+		EDF765071E7AFA6500D5D0F0 /* NVActivityIndicatorAnimationBlipMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBlipMe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 				90A879821BA55798001C8989 /* NVActivityIndicatorAnimationPacman.swift */,
 				90A879831BA55798001C8989 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */,
 				90A879841BA55798001C8989 /* NVActivityIndicatorAnimationSquareSpin.swift */,
+				EDF765071E7AFA6500D5D0F0 /* NVActivityIndicatorAnimationBlipMe.swift */,
 				90A879851BA55798001C8989 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */,
 				BD1452331C15810200B952C8 /* NVActivityIndicatorAnimationBallRotateChase.swift */,
 				233236801D0D80C9001F4703 /* NVActivityIndicatorAnimationOrbit.swift */,
@@ -354,7 +357,9 @@
 				TargetAttributes = {
 					239CAB1F1B5EBB2E0051DC06 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = J84GPP54JV;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					23FB134E1D76D5370096EBE3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -364,6 +369,7 @@
 					90A8792E1BA554A0001C8989 = {
 						CreatedOnToolsVersion = 6.4;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -439,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF765081E7AFA6500D5D0F0 /* NVActivityIndicatorAnimationBlipMe.swift in Sources */,
 				90A879951BA55798001C8989 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				90A879A81BA55798001C8989 /* NVActivityIndicatorView.swift in Sources */,
 				90A8798E1BA55798001C8989 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
@@ -607,6 +614,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = J84GPP54JV;
 				INFOPLIST_FILE = NVActivityIndicatorViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.nvin.$(PRODUCT_NAME:rfc1034identifier)";
@@ -619,6 +628,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = J84GPP54JV;
 				INFOPLIST_FILE = NVActivityIndicatorViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.nvin.$(PRODUCT_NAME:rfc1034identifier)";
@@ -659,9 +670,9 @@
 		90A879431BA554A0001C8989 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -685,9 +696,9 @@
 		90A879441BA554A0001C8989 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

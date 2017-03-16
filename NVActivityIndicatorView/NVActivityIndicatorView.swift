@@ -251,6 +251,12 @@ public enum NVActivityIndicatorType: Int {
      */
     case orbit
     /**
+     Blipme.
+
+     - returns: Instance of NVActivityIndicatorAnimationBlipMe.
+     */
+    case blipme
+    /**
      AudioEqualizer.
 
      - returns: Instance of NVActivityIndicatorAnimationAudioEqualizer.
@@ -325,6 +331,8 @@ public enum NVActivityIndicatorType: Int {
             return NVActivityIndicatorAnimationOrbit()
         case .audioEqualizer:
             return NVActivityIndicatorAnimationAudioEqualizer()
+        case .blipme:
+            return NVActivityIndicatorAnimationBlipMe()
         }
     }
 }
