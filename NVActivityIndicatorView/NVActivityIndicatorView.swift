@@ -62,6 +62,8 @@ import UIKit
  - BallRotateChase:         BallRotateChase animation.
  - Orbit:                   Orbit animation.
  - AudioEqualizer:          AudioEqualizer animation.
+ - BlipMe:                  BlipMe animation.
+ - BlipMeWhite:             BlipMe White animation.
  */
 public enum NVActivityIndicatorType: Int {
     /**
@@ -257,6 +259,12 @@ public enum NVActivityIndicatorType: Int {
      */
     case blipme
     /**
+     BlipmeWhite.
+
+     - returns: Instance of NVActivityIndicatorAnimationBlipMeWhite.
+     */
+    case blipmeWhite
+    /**
      AudioEqualizer.
 
      - returns: Instance of NVActivityIndicatorAnimationAudioEqualizer.
@@ -333,6 +341,8 @@ public enum NVActivityIndicatorType: Int {
             return NVActivityIndicatorAnimationAudioEqualizer()
         case .blipme:
             return NVActivityIndicatorAnimationBlipMe()
+        case .blipmeWhite:
+            return NVActivityIndicatorAnimationBlipMeWhite()
         }
     }
 }

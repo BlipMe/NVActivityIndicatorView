@@ -1,5 +1,5 @@
 //
-//  NVActivityIndicatorAnimationBlipMe.swift
+//  NVActivityIndicatorAnimationBlipMeWhite.swift
 //  NVActivityIndicatorViewDemo
 //
 // The MIT License (MIT)
@@ -27,7 +27,7 @@
 
 import UIKit
 
-class NVActivityIndicatorAnimationBlipMe: NVActivityIndicatorAnimationDelegate {
+class NVActivityIndicatorAnimationBlipMeWhite: NVActivityIndicatorAnimationDelegate {
 
     func setUpAnimation(in layer: CALayer, size: CGSize, color: UIColor) {
         let lineSize = CGFloat(4.0)
@@ -37,10 +37,6 @@ class NVActivityIndicatorAnimationBlipMe: NVActivityIndicatorAnimationDelegate {
         let beginTime = CACurrentMediaTime()
         let beginTimes = [0.0, 0.25, 0.5]
         let timingFunction = CAMediaTimingFunction(controlPoints: 0.2, 0.68, 0.18, 1.08)
-
-        let colors = [UIColor(red: 1.0, green: 193/255, blue: 25/255, alpha: 1.0),
-                      UIColor(red: 0.0, green: 101/255, blue: 239/255, alpha: 1.0),
-                      UIColor(red: 31/255, green: 185/255, blue: 1.0, alpha: 1.0)]
 
         // Animation
         let animation = CAKeyframeAnimation(keyPath: "transform.scale.y")
@@ -52,14 +48,23 @@ class NVActivityIndicatorAnimationBlipMe: NVActivityIndicatorAnimationDelegate {
         animation.repeatCount = HUGE
         animation.isRemovedOnCompletion = false
 
+        let animation2 = CAKeyframeAnimation(keyPath: "opacity")
+        animation2.keyTimes = [0, 0.25, 1]
+        animation2.timingFunctions = [timingFunction, timingFunction]
+        animation2.values = [1.0, 0.4, 1.0]
+        animation2.duration = duration
+        animation2.repeatCount = HUGE
+        animation2.isRemovedOnCompletion = false
+
         // Draw lines
         for i in 0 ..< 3 {
-            let line = NVActivityIndicatorShape.line.layerWith(size: CGSize(width: lineSize, height: size.height), color: colors[i])
+            let line = NVActivityIndicatorShape.line.layerWith(size: CGSize(width: lineSize, height: size.height), color: UIColor.white)
             let frame = CGRect(x: x + lineSize * 3 * CGFloat(i), y: y, width: lineSize, height: size.height)
 
             animation.beginTime = beginTime + beginTimes[i]
             line.frame = frame
             line.add(animation, forKey: "animation")
+            line.add(animation2, forKey: "animation2")
             layer.addSublayer(line)
         }
     }
